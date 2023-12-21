@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://btvunhqvwndv4"]
+
+[ext_resource type="Texture2D" uid="uid://nbxb6bmxk85u" path="res://Tests/room.jpg" id="1_epgu2"]
+
+[node name="TextureRect" type="TextureRect"]
+texture = ExtResource("1_epgu2")
+expand_mode = 5
+stretch_mode = 5

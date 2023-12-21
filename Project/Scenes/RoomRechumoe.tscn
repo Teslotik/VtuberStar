@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckt76uxlgx1xy"]
+
+[ext_resource type="Texture2D" uid="uid://cuny6w263pppc" path="res://Background/RoomRechumoe.png" id="1_2wytw"]
+[ext_resource type="PackedScene" uid="uid://b2ddc0r27fb5k" path="res://Prefabs/game.tscn" id="2_gfmcy"]
+[ext_resource type="Texture2D" uid="uid://djdvr4bfa5jxd" path="res://Items/ExclamationMark.png" id="3_fcpjr"]
+
+[node name="RoomRechumoe" type="Node3D"]
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 0, 0, 0)
+alpha_cut = 3
+texture = ExtResource("1_2wytw")
+
+[node name="Stove" parent="." instance=ExtResource("2_gfmcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90559, 0.1, 1.27973)
+texture = ExtResource("3_fcpjr")
+metadata/minigame = "Stove"
+
+[node name="Mirror" parent="." instance=ExtResource("2_gfmcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64424, 0.1, -1.32832)
+texture = ExtResource("3_fcpjr")
+metadata/minigame = "Mirror"
+
+[node name="Cookbooks" parent="." instance=ExtResource("2_gfmcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22168, 0.1, -0.517213)
+texture = ExtResource("3_fcpjr")
+metadata/minigame = "Cookbooks"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnnky2tk8wc24"]
+
+[ext_resource type="Texture2D" uid="uid://b742mlmr3mwpf" path="res://Background/RoomLuca.png" id="1_srped"]
+
+[node name="DateWithLuca" type="Node3D"]
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 0, 0, 0)
+alpha_cut = 3
+texture = ExtResource("1_srped")

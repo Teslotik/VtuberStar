@@ -1,0 +1,783 @@
+[gd_scene load_steps=44 format=3 uid="uid://ccvy36xea5frd"]
+
+[ext_resource type="PackedScene" uid="uid://dbhhjertdxx6h" path="res://Prefabs/timeline.tscn" id="1_l1fgk"]
+[ext_resource type="Script" path="res://Scripts/CameraController.cs" id="1_uig8d"]
+[ext_resource type="Texture2D" uid="uid://ds4wy75ggwpiq" path="res://GUI/Background.png" id="2_7758h"]
+[ext_resource type="Texture2D" uid="uid://ctw6lxclqilof" path="res://Tests/2_okno.png" id="2_p4lbt"]
+[ext_resource type="PackedScene" uid="uid://bmjt3lduf1286" path="res://Activities/Info/info.tscn" id="2_s6tfv"]
+[ext_resource type="Script" path="res://Scripts/Progress.cs" id="3_c4rgq"]
+[ext_resource type="PackedScene" uid="uid://ync742vwj2j1" path="res://Activities/Narration/narration.tscn" id="3_mb86t"]
+[ext_resource type="Texture2D" uid="uid://crgpc2op8j57u" path="res://Tests/linia.png" id="6_heaq5"]
+[ext_resource type="Script" path="res://Entities/Items.cs" id="7_2wn5v"]
+[ext_resource type="PackedScene" uid="uid://dr7hjahhd1hk1" path="res://Prefabs/activity.tscn" id="7_yib5m"]
+[ext_resource type="PackedScene" uid="uid://bnp8h02js6se2" path="res://Prefabs/bonus.tscn" id="8_yn4qj"]
+[ext_resource type="Texture2D" uid="uid://du77bt56260vp" path="res://GUI/PlayerAvatar.png" id="9_vtpeh"]
+[ext_resource type="Texture2D" uid="uid://cg3tp1pdo4rqj" path="res://GUI/PlayerName.png" id="9_wxcf1"]
+[ext_resource type="Texture2D" uid="uid://bbtfls4l83ccs" path="res://GUI/EndDay_normal.png" id="10_nrncx"]
+[ext_resource type="Texture2D" uid="uid://c5xhcxtnkl8ma" path="res://GUI/EndDay_hovered.png" id="11_1qqes"]
+[ext_resource type="Script" path="res://Scripts/Floating.cs" id="11_62nua"]
+[ext_resource type="Texture2D" uid="uid://75plab5dork4" path="res://GUI/Tips.png" id="12_q4atm"]
+[ext_resource type="Script" path="res://Scripts/ParallaxController.cs" id="14_b1syp"]
+[ext_resource type="Texture2D" uid="uid://cvaafrflsxce1" path="res://Background/Menu_l1.png" id="15_usas4"]
+[ext_resource type="Texture2D" uid="uid://b5focvgk6lwmx" path="res://Background/Menu_l2.png" id="16_45s1q"]
+[ext_resource type="Texture2D" uid="uid://cj4pdh4pfjjmj" path="res://Background/Menu_l3.png" id="17_34epp"]
+[ext_resource type="Texture2D" uid="uid://d0mw1g3k84xkx" path="res://Background/Menu_l4.png" id="18_3gmxf"]
+[ext_resource type="Texture2D" uid="uid://b60te0jum4cjo" path="res://Background/Menu_l5.png" id="19_sxkqt"]
+[ext_resource type="Texture2D" uid="uid://das07yrxleffm" path="res://GUI/Gallery_normal.png" id="19_xl31t"]
+[ext_resource type="Texture2D" uid="uid://cykvt6838msxw" path="res://GUI/Gallery_hovered.png" id="20_i0kn6"]
+[ext_resource type="Texture2D" uid="uid://cyh5es8yy7xxv" path="res://GUI/NewGame_normal.png" id="20_vt4or"]
+[ext_resource type="Texture2D" uid="uid://coicq00yc4cx" path="res://GUI/NewGame_hovered.png" id="21_602ws"]
+[ext_resource type="Texture2D" uid="uid://c38jj8v20iuq8" path="res://GUI/Load_normal.png" id="22_0b74q"]
+[ext_resource type="Texture2D" uid="uid://b4fciyy3akvve" path="res://GUI/Load_hovered.png" id="23_7n8w1"]
+[ext_resource type="Script" path="res://Entities/Gallery.cs" id="26_6n0wf"]
+[ext_resource type="Texture2D" uid="uid://csvnq075d8g2k" path="res://GUI/AboutContest_normal.png" id="26_hoagt"]
+[ext_resource type="Texture2D" uid="uid://dtssw47bevwjt" path="res://Background/AboutJam.png" id="27_otm0p"]
+[ext_resource type="Texture2D" uid="uid://d4k24gng2ybog" path="res://GUI/AboutContest_hovered.png" id="27_pijth"]
+[ext_resource type="Texture2D" uid="uid://8alyea475erl" path="res://Icons/Github.png" id="27_sj0e5"]
+[ext_resource type="Texture2D" uid="uid://bsx2mjncf6q3l" path="res://GUI/Back_normal.png" id="28_pqlgr"]
+[ext_resource type="Texture2D" uid="uid://ftdnq4aof38" path="res://GUI/Back_hovered.png" id="29_p7cb0"]
+[ext_resource type="Texture2D" uid="uid://cwkcbd6l11f13" path="res://GUI/Exit_hovered.png" id="30_rcxo1"]
+[ext_resource type="Texture2D" uid="uid://bxhsyt3e20yn1" path="res://GUI/Exit_normal.png" id="30_wiilh"]
+
+[sub_resource type="Environment" id="Environment_06voj"]
+glow_normalized = true
+glow_strength = 1.54
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hi3h1"]
+viewport_path = NodePath("GameView")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdg14"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hvnv7"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="World3D" id="World3D_0swob"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_06voj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7758h")
+stretch_mode = 1
+
+[node name="ScreenContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 190
+
+[node name="Screen" type="TextureRect" parent="Control/ScreenContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = SubResource("ViewportTexture_hi3h1")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Border" type="NinePatchRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_p4lbt")
+patch_margin_left = 50
+patch_margin_top = 135
+patch_margin_right = 53
+patch_margin_bottom = 143
+
+[node name="Illustration" parent="Control" instance=ExtResource("2_s6tfv")]
+visible = false
+layout_mode = 1
+
+[node name="Floating" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_62nua")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Container" type="VBoxContainer" parent="Control/MarginContainer3"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="Timeline" parent="Control/MarginContainer3/Container" instance=ExtResource("1_l1fgk")]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+texture = ExtResource("6_heaq5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Progress" type="MarginContainer" parent="Control/MarginContainer3/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("3_c4rgq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Actions" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Действий: 0"
+
+[node name="Gaming" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Gaming"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Геймер"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Gaming"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Stamina" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Stamina"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Выносливость"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Stamina"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Cooking" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Cooking"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Готовка"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Cooking"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Charisma" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Charisma"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Харизма"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Charisma"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Creativity" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Creativity"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Творчество"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Creativity"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Intelligence" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Intelligence"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Интеллект"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Intelligence"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Relations" type="HBoxContainer" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Relations"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Отношения"
+
+[node name="Progress" type="ProgressBar" parent="Control/MarginContainer3/Container/Progress/HBoxContainer/Relations"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 1.0
+value = 10.0
+
+[node name="Balance" type="Label" parent="Control/MarginContainer3/Container/Progress/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Balance: 0"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer3/Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/MarginContainer3/Container/HBoxContainer"]
+layout_mode = 2
+
+[node name="Items" type="VBoxContainer" parent="Control/MarginContainer3/Container/HBoxContainer/PanelContainer2"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("7_2wn5v")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer3/Container/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer3/Container/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Bonus" parent="Control/MarginContainer3/Container/HBoxContainer/PanelContainer/MarginContainer" instance=ExtResource("8_yn4qj")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="PlayerState" type="VBoxContainer" parent="Control/MarginContainer3/Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="PlayerName" type="MarginContainer" parent="Control/MarginContainer3/Container/PlayerState"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/MarginContainer3/Container/PlayerState/PlayerName"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+texture = ExtResource("9_wxcf1")
+region_rect = Rect2(-0.135902, -0.108776, 291.269, 75.243)
+patch_margin_left = 7
+patch_margin_top = 26
+patch_margin_right = 6
+patch_margin_bottom = 24
+
+[node name="Name" type="Label" parent="Control/MarginContainer3/Container/PlayerState/PlayerName"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundVolume" type="HSlider" parent="Control/MarginContainer3/Container/PlayerState"]
+modulate = Color(1, 0.141176, 0.0980392, 1)
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+value = 50.0
+
+[node name="HBoxContainer" type="PanelContainer" parent="Control/MarginContainer3/Container/PlayerState"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xdg14")
+
+[node name="Narration" parent="Control/MarginContainer3/Container/PlayerState/HBoxContainer" instance=ExtResource("3_mb86t")]
+layout_mode = 2
+
+[node name="PlayerAvatar" type="TextureRect" parent="Control/MarginContainer3/Container/PlayerState/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_vtpeh")
+stretch_mode = 4
+
+[node name="EndDay" type="TextureButton" parent="Control"]
+custom_minimum_size = Vector2(180, 90)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -123.0
+offset_right = -21.0
+offset_bottom = -33.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("10_nrncx")
+texture_pressed = ExtResource("11_1qqes")
+texture_hover = ExtResource("11_1qqes")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Tip" type="NinePatchRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -107.5
+offset_right = 210.5
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_q4atm")
+patch_margin_left = 40
+patch_margin_top = 34
+patch_margin_right = 30
+patch_margin_bottom = 31
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Tip"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Tip/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Control/Tip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Подсказка"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="Control/Tip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Описание"
+autowrap_mode = 2
+
+[node name="Interactive" type="MarginContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control/Interactive"]
+layout_mode = 2
+size_flags_horizontal = 4
+ratio = 0.8
+stretch_mode = 1
+
+[node name="Activity" parent="Control/Interactive/AspectRatioContainer" instance=ExtResource("7_yib5m")]
+layout_mode = 2
+
+[node name="Info" parent="Control" instance=ExtResource("2_s6tfv")]
+visible = false
+layout_mode = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.917971, 0.292255, 0.268171, -0.396217, 0.707107, 0.585672, -0.01846, -0.643884, 0.7649, 14.6776, 0, 2.34937)
+shadow_enabled = true
+shadow_bias = 0.177
+
+[node name="MenuScreen" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_hvnv7")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuScreen"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -535.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 350
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuScreen/MarginContainer"]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NewGame" type="TextureButton" parent="MenuScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("20_vt4or")
+texture_pressed = ExtResource("21_602ws")
+texture_hover = ExtResource("21_602ws")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Load" type="TextureButton" parent="MenuScreen/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("22_0b74q")
+texture_pressed = ExtResource("23_7n8w1")
+texture_hover = ExtResource("23_7n8w1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Gallery" type="TextureButton" parent="MenuScreen/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("19_xl31t")
+texture_pressed = ExtResource("20_i0kn6")
+texture_hover = ExtResource("20_i0kn6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="AboutJam" type="TextureButton" parent="MenuScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("26_hoagt")
+texture_pressed = ExtResource("27_pijth")
+texture_hover = ExtResource("27_pijth")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Exit" type="TextureButton" parent="MenuScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("30_wiilh")
+texture_pressed = ExtResource("30_rcxo1")
+texture_hover = ExtResource("30_rcxo1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuScreen"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = -38.0
+offset_right = 323.0
+offset_bottom = -10.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MenuScreen/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+texture = ExtResource("27_sj0e5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LinkButton" type="LinkButton" parent="MenuScreen/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.235294, 0.435294, 0.870588, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.235294, 0.870588, 1)
+text = "Исходный код доступен на Github"
+uri = "https://github.com/Teslotik"
+
+[node name="Gallery" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("26_6n0wf")
+
+[node name="Background" type="Panel" parent="Gallery"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Gallery"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Gallery/MarginContainer"]
+layout_mode = 2
+
+[node name="Container" type="VBoxContainer" parent="Gallery/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AboutJam" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="AboutJam"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_usas4")
+expand_mode = 1
+
+[node name="Info" type="TextureButton" parent="AboutJam"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("27_otm0p")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LinkButton" type="LinkButton" parent="AboutJam/Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.635938
+anchor_top = 0.812963
+anchor_right = 0.635938
+anchor_bottom = 0.812963
+offset_top = -20.0
+offset_right = 272.0
+offset_bottom = 20.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.235294, 0.435294, 0.870588, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.235294, 0.870588, 1)
+theme_override_font_sizes/font_size = 12
+text = "https://vk.com/timeproject_novella"
+uri = "https://vk.com/timeproject_novella"
+metadata/_edit_use_anchors_ = true
+
+[node name="LinkButton2" type="LinkButton" parent="AboutJam/Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.469792
+anchor_top = 0.442593
+anchor_right = 0.469792
+anchor_bottom = 0.442593
+offset_top = -20.0
+offset_right = 272.0
+offset_bottom = 20.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.235294, 0.435294, 0.870588, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.235294, 0.870588, 1)
+theme_override_font_sizes/font_size = 12
+text = "https://vk.com/frulive_vtubers"
+uri = "https://vk.com/frulive_vtubers"
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="TextureButton" parent="AboutJam"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -91.0
+offset_right = -81.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("28_pqlgr")
+texture_pressed = ExtResource("29_p7cb0")
+texture_hover = ExtResource("29_p7cb0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Disclaimer" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Info" parent="Disclaimer" instance=ExtResource("2_s6tfv")]
+layout_mode = 1
+
+[node name="Button" type="TextureButton" parent="Disclaimer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Ending" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Info" parent="Ending" instance=ExtResource("2_s6tfv")]
+layout_mode = 1
+
+[node name="Button" type="TextureButton" parent="Ending"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Launch" parent="." instance=ExtResource("2_s6tfv")]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+world_3d = SubResource("World3D_0swob")
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Marker3D2" type="Marker3D" parent="SubViewport"]
+script = ExtResource("14_b1syp")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/Marker3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0638285, 13.4, -0.0428095)
+fov = 73.7
+size = 20.0
+
+[node name="Background" type="Sprite3D" parent="SubViewport"]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 0, -1.4, 0)
+alpha_cut = 1
+texture = ExtResource("15_usas4")
+
+[node name="Star" type="Sprite3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.4, -0.4, -0.8)
+alpha_cut = 1
+texture = ExtResource("16_45s1q")
+
+[node name="Vtuber" type="Sprite3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.4, -1, -0.8)
+alpha_cut = 1
+texture = ExtResource("17_34epp")
+
+[node name="GG" type="Sprite3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.2, -0.6, 0)
+alpha_cut = 1
+texture = ExtResource("19_sxkqt")
+
+[node name="Stars" type="Sprite3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.2, 0)
+alpha_cut = 1
+texture = ExtResource("18_3gmxf")
+
+[node name="GameView" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(1280, 720)
+
+[node name="Marker3D" type="Marker3D" parent="GameView"]
+script = ExtResource("1_uig8d")
+
+[node name="Camera3D" type="Camera3D" parent="GameView/Marker3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5, 0)
+fov = 73.7
+size = 20.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameView"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

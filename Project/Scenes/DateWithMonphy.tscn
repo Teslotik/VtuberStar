@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0v4l8f3w8p6f"]
+
+[ext_resource type="Texture2D" uid="uid://cg7fb4v18wb61" path="res://Background/MonphyRoom.png" id="1_afj6t"]
+
+[node name="DateWithMonphy" type="Node3D"]
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 0, 0, 0)
+alpha_cut = 3
+texture = ExtResource("1_afj6t")

@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://cg55r6c0o14ob"]
+
+[ext_resource type="Script" path="res://Scripts/Shop.cs" id="1_1tcbt"]
+[ext_resource type="Texture2D" uid="uid://bmfhsj7hqm2l0" path="res://Background/Shop.png" id="1_pr2ne"]
+[ext_resource type="PackedScene" uid="uid://b7j2vd54b0rq" path="res://Prefabs/item.tscn" id="2_4klel"]
+[ext_resource type="Texture2D" uid="uid://culeii28mc14e" path="res://Items/Toy.png" id="3_jpuem"]
+[ext_resource type="Texture2D" uid="uid://haqfm2e1hbcn" path="res://Items/Energy.png" id="4_l7h2m"]
+[ext_resource type="Texture2D" uid="uid://6n24t7g4ba4y" path="res://Items/Beer.png" id="5_axig1"]
+[ext_resource type="Texture2D" uid="uid://cxmnlcuwi36ln" path="res://Items/Gaming.png" id="6_jy62t"]
+[ext_resource type="Texture2D" uid="uid://dxbsym8qoeqmc" path="res://Items/Intelligence.png" id="7_t21x7"]
+[ext_resource type="Texture2D" uid="uid://bmbeefpsa054q" path="res://Items/Stamina.png" id="8_xipcq"]
+[ext_resource type="Texture2D" uid="uid://tqhgq35nepdi" path="res://Items/Charisma.png" id="9_d7bgp"]
+[ext_resource type="Texture2D" uid="uid://d00ku4pw2qvmw" path="res://Items/Creativity.png" id="10_20dot"]
+[ext_resource type="Texture2D" uid="uid://ccqppk4d6t3k7" path="res://Items/Cooking.png" id="11_pb4uv"]
+
+[node name="Shop" type="Node3D"]
+script = ExtResource("1_1tcbt")
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 0, 0, 0)
+alpha_cut = 1
+texture = ExtResource("1_pr2ne")
+
+[node name="Toy" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82094, 0.267805, -0.652853)
+texture = ExtResource("3_jpuem")
+metadata/tag = "Toy"
+
+[node name="Energy" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.741317, 0.267805, -0.652853)
+texture = ExtResource("4_l7h2m")
+metadata/tag = "Energy"
+
+[node name="Beer" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421065, 0.267805, -0.652853)
+texture = ExtResource("5_axig1")
+metadata/tag = "Beer"
+
+[node name="Charisma" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59097, 0.267805, -0.652853)
+texture = ExtResource("9_d7bgp")
+metadata/tag = "Charisma"
+
+[node name="Cooking" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70821, 0.267805, -0.652853)
+texture = ExtResource("11_pb4uv")
+metadata/tag = "Cooking"
+
+[node name="Gaming" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05405, 0.267805, 1.26506)
+texture = ExtResource("6_jy62t")
+metadata/tag = "Gaming"
+
+[node name="Intelligence" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0948066, 0.267805, 1.26506)
+texture = ExtResource("7_t21x7")
+metadata/tag = "Intelligence"
+
+[node name="Stamina" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.917103, 0.267805, 1.26506)
+texture = ExtResource("8_xipcq")
+metadata/tag = "Stamina"
+
+[node name="Creativity" parent="." instance=ExtResource("2_4klel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92901, 0.267805, 1.26506)
+texture = ExtResource("10_20dot")
+metadata/tag = "Creativity"

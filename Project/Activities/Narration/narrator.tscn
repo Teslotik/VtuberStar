@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://2ttnlsuyikk"]
+
+[ext_resource type="Texture2D" uid="uid://bj746sg42ay71" path="res://GUI/DialogueWindow.png" id="1_2klmy"]
+[ext_resource type="Texture2D" uid="uid://cg3tp1pdo4rqj" path="res://GUI/PlayerName.png" id="2_dhqga"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4yl7"]
+
+[node name="Narrator" type="PanelContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -342.0
+offset_right = 1407.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e4yl7")
+
+[node name="Container" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(1250, 342)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("1_2klmy")
+patch_margin_left = 396
+patch_margin_top = 90
+patch_margin_right = 127
+patch_margin_bottom = 111
+
+[node name="DialogueName" type="MarginContainer" parent="Container"]
+layout_mode = 2
+offset_left = 346.0
+offset_top = 19.0
+offset_right = 576.0
+offset_bottom = 69.0
+size_flags_horizontal = 0
+
+[node name="Background" type="NinePatchRect" parent="Container/DialogueName"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+texture = ExtResource("2_dhqga")
+region_rect = Rect2(-0.135902, -0.108776, 291.269, 75.243)
+patch_margin_left = 7
+patch_margin_top = 26
+patch_margin_right = 6
+patch_margin_bottom = 24
+
+[node name="Name" type="Label" parent="Container/DialogueName"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="Container"]
+layout_mode = 2
+offset_left = 334.0
+offset_top = 94.0
+offset_right = 1173.0
+offset_bottom = 286.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "Narrator"
+fit_content = true

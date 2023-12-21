@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://du2pvis55agy6"]
+
+[ext_resource type="Texture2D" uid="uid://crdtjb445b2g2" path="res://Background/Hub.png" id="1_k1vb2"]
+
+[node name="Hub" type="Node3D"]
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 0, 0, 0)
+alpha_cut = 3
+texture = ExtResource("1_k1vb2")

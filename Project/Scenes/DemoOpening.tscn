@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://bebddn1jlnp6n"]
+
+[ext_resource type="PackedScene" uid="uid://d1wi6s4delcv8" path="res://Models/Floor.gltf" id="1_d4s05"]
+[ext_resource type="PackedScene" uid="uid://tr6il7gb33yg" path="res://Models/TopWall.gltf" id="2_vkk6b"]
+[ext_resource type="PackedScene" uid="uid://dfynmfcameve2" path="res://Models/LeftTopWall.gltf" id="3_22nx0"]
+[ext_resource type="PackedScene" uid="uid://c4wx1n3tyw4q5" path="res://Models/LeftWall.gltf" id="4_ut87g"]
+[ext_resource type="PackedScene" uid="uid://doqa6y65req0l" path="res://Models/Pillar.gltf" id="5_8i6fd"]
+[ext_resource type="PackedScene" uid="uid://182asws5fvwo" path="res://Models/Table1.gltf" id="6_vsxov"]
+[ext_resource type="PackedScene" uid="uid://c537same8lrl6" path="res://Models/Table2.gltf" id="7_kmmkg"]
+[ext_resource type="PackedScene" uid="uid://1mbpadhnue1l" path="res://Prefabs/player_character.tscn" id="8_64obp"]
+[ext_resource type="PackedScene" uid="uid://dq2etwwxewvj8" path="res://Models/Computer.gltf" id="9_fomft"]
+[ext_resource type="PackedScene" uid="uid://urb8klgaqxes" path="res://Models/Cup.gltf" id="10_nqnkk"]
+
+[node name="Cafe" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_d4s05")]
+
+[node name="Floor3" parent="." instance=ExtResource("1_d4s05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Floor4" parent="." instance=ExtResource("1_d4s05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="Floor5" parent="." instance=ExtResource("1_d4s05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+
+[node name="Floor6" parent="." instance=ExtResource("1_d4s05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -9)
+
+[node name="Floor7" parent="." instance=ExtResource("1_d4s05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12)
+
+[node name="Floor2" parent="." instance=ExtResource("1_d4s05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="TopWall" parent="." instance=ExtResource("2_vkk6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+
+[node name="TopWall2" parent="." instance=ExtResource("2_vkk6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="TopWall3" parent="." instance=ExtResource("2_vkk6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -9)
+
+[node name="TopWall4" parent="." instance=ExtResource("2_vkk6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+
+[node name="LeftTopWall" parent="." instance=ExtResource("3_22nx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="LeftTopWall2" parent="." instance=ExtResource("3_22nx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="LeftWall" parent="." instance=ExtResource("4_ut87g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="LeftWall2" parent="." instance=ExtResource("4_ut87g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="Pillar" parent="." instance=ExtResource("5_8i6fd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 1.5)
+
+[node name="Pillar2" parent="." instance=ExtResource("5_8i6fd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 4.5)
+
+[node name="Pillar3" parent="." instance=ExtResource("5_8i6fd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 1.5)
+
+[node name="Table1" parent="." instance=ExtResource("6_vsxov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -3)
+
+[node name="Table2" parent="." instance=ExtResource("6_vsxov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -6)
+
+[node name="Table3" parent="." instance=ExtResource("6_vsxov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -9)
+
+[node name="Table4" parent="." instance=ExtResource("7_kmmkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+
+[node name="Table5" parent="." instance=ExtResource("7_kmmkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("8_64obp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
+
+[node name="Computer" parent="." instance=ExtResource("9_fomft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17417, 1.34579, -5.99109)
+
+[node name="Cup" parent="." instance=ExtResource("10_nqnkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92375, 1.16805, -3.27917)

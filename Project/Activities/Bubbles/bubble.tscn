@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm8mhjmr8cuom"]
+
+[ext_resource type="Texture2D" uid="uid://cyuu5d62qojdq" path="res://GUI/GreenIngredient.png" id="1_8lxeb"]
+[ext_resource type="Script" path="res://Activities/Bubbles/Bubble.cs" id="2_kjiml"]
+
+[node name="TextureButton" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_8lxeb")
+script = ExtResource("2_kjiml")

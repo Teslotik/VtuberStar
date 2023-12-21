@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2ddc0r27fb5k"]
+
+[ext_resource type="Texture2D" uid="uid://cyuu5d62qojdq" path="res://GUI/GreenIngredient.png" id="1_2pvjh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m1ha1"]
+radius = 0.347528
+
+[node name="Game" type="Sprite3D"]
+billboard = 1
+alpha_cut = 1
+texture = ExtResource("1_2pvjh")
+
+[node name="AnimatableBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+shape = SubResource("SphereShape3D_m1ha1")

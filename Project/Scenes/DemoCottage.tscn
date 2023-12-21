@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7jgn6g0b37lo"]
+
+[ext_resource type="PackedScene" uid="uid://d1wi6s4delcv8" path="res://Models/Floor.gltf" id="1_mtd7m"]
+[ext_resource type="PackedScene" uid="uid://c537same8lrl6" path="res://Models/Table2.gltf" id="2_5xbmn"]
+[ext_resource type="PackedScene" uid="uid://182asws5fvwo" path="res://Models/Table1.gltf" id="3_l6brt"]
+[ext_resource type="PackedScene" uid="uid://cy57gfibodrwd" path="res://Models/Lamp.gltf" id="4_rfwq7"]
+[ext_resource type="PackedScene" uid="uid://dq2etwwxewvj8" path="res://Models/Computer.gltf" id="5_7bfbo"]
+
+[node name="Cottage" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -6)
+
+[node name="Floor2" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+
+[node name="Floor3" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="Floor4" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="Floor5" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Floor6" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Floor7" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="Floor8" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="Floor9" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6)
+
+[node name="Floor10" parent="." instance=ExtResource("1_mtd7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="Table2" parent="." instance=ExtResource("2_5xbmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 7)
+
+[node name="Table3" parent="." instance=ExtResource("2_5xbmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 3)
+
+[node name="Table1" parent="." instance=ExtResource("3_l6brt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6)
+
+[node name="Lamp" parent="." instance=ExtResource("4_rfwq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 7)
+
+[node name="Lamp2" parent="." instance=ExtResource("4_rfwq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="Lamp3" parent="." instance=ExtResource("4_rfwq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -7)
+
+[node name="Lamp4" parent="." instance=ExtResource("4_rfwq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="Computer" parent="." instance=ExtResource("5_7bfbo")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 1.33145, 3)
+
+[node name="Computer2" parent="." instance=ExtResource("5_7bfbo")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1.33145, 3)

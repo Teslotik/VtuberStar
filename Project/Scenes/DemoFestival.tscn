@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://gas1xtq04o3f"]
+
+[ext_resource type="PackedScene" uid="uid://d1wi6s4delcv8" path="res://Models/Floor.gltf" id="1_yvc0l"]
+[ext_resource type="PackedScene" uid="uid://doqa6y65req0l" path="res://Models/Pillar.gltf" id="2_wrs3c"]
+[ext_resource type="PackedScene" uid="uid://bh1wyxo8bj7as" path="res://Models/Printer3D.gltf" id="3_0dt2l"]
+[ext_resource type="PackedScene" uid="uid://c7bme001ndpx4" path="res://Models/BooksStack.gltf" id="4_4svtn"]
+[ext_resource type="PackedScene" uid="uid://182asws5fvwo" path="res://Models/Table1.gltf" id="5_e0w2p"]
+[ext_resource type="PackedScene" uid="uid://c537same8lrl6" path="res://Models/Table2.gltf" id="6_x08d1"]
+
+[node name="Festival" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_yvc0l")]
+
+[node name="Floor5" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Floor6" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Floor2" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Floor3" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Floor4" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="Floor7" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="Floor8" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="Floor9" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 9)
+
+[node name="Floor10" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+
+[node name="Floor11" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Floor12" parent="." instance=ExtResource("1_yvc0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+
+[node name="Pillar" parent="." instance=ExtResource("2_wrs3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 9)
+
+[node name="Pillar3" parent="." instance=ExtResource("2_wrs3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="Pillar4" parent="." instance=ExtResource("2_wrs3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="Pillar5" parent="." instance=ExtResource("2_wrs3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+
+[node name="Pillar6" parent="." instance=ExtResource("2_wrs3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Pillar7" parent="." instance=ExtResource("2_wrs3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+
+[node name="Printer3D" parent="." instance=ExtResource("3_0dt2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48948, 0.00942421, 0.75471)
+
+[node name="BooksStack" parent="." instance=ExtResource("4_4svtn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Table1" parent="." instance=ExtResource("5_e0w2p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 3)
+
+[node name="Table2" parent="." instance=ExtResource("6_x08d1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 7)

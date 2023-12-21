@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7j2vd54b0rq"]
+
+[ext_resource type="Texture2D" uid="uid://djdvr4bfa5jxd" path="res://Items/ExclamationMark.png" id="1_8k2e1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m1ha1"]
+radius = 0.347528
+
+[node name="Item" type="Sprite3D"]
+billboard = 1
+alpha_cut = 1
+texture = ExtResource("1_8k2e1")
+
+[node name="AnimatableBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+shape = SubResource("SphereShape3D_m1ha1")

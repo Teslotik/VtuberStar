@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbir16e3lf1l0"]
+
+[ext_resource type="Script" path="res://Activities/Bubbles/BubblesMiniGame.cs" id="1_lbqhw"]
+[ext_resource type="Texture2D" uid="uid://5d6hsn7c5jk2" path="res://Background/BubblesTutorial.png" id="2_64yeb"]
+
+[node name="BubblesMiniGame" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbqhw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_64yeb")
+expand_mode = 1
+stretch_mode = 5
